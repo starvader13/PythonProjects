@@ -26,6 +26,10 @@ cd project-folder
         <a href="https://github.com/starvader13/PythonProjects/tree/335aea3316848ea9d1b72eb9fee3156765beb415/word-guessing-game">Word Guessing Game</a><br>
         Created By: <a href="https://github.com/starvader13">Starvader</a>
     </li>
+    <li>
+        <a href="./number-guessing-game/">NUmber Guessing Game</a><br>
+        Created By: <a href="https://github.com/starvader13">Starvader</a>
+    </li>
 </ul>
 
 ## Prerequisites
