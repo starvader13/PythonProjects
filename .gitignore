@@ -1,3 +1,7 @@
 # Currently working project that do not need to be pushed to the remote server
 
 /number-guessing-game
+
+# Cache File
+/word-guessing-game/__pycache__
+/number-guessing-game/__pycache__
