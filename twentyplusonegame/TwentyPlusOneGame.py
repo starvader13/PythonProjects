@@ -105,4 +105,12 @@ class TwentyPLusOneGame:
         while self.itr:
             self.count_list = len(self.count_list) + 1
             self.itr -= 1
-    
+
+    def checkListElement(self):
+        if len(self.count_list) == 0:
+            return True
+        elif self.count_list[-1]>=21:
+            return False
+        else:
+            return True
+            

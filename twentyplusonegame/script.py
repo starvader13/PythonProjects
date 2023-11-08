@@ -19,9 +19,18 @@ print("\nIf you want to start first press F otherwise press S: ")
 print("> ",end="")
 game.user_playing_position = str(input())
 
-if game.user_playing_position == True:
-    game.userChance()
-else:
-    game.computerChance()
+# if game.user_playing_position == True:
+#     game.userChance()
+# else:
+#     game.computerChance()
 
-print(game.count_list)
+while game.checkListElement():
+    if game.user_playing_position == True:
+        game.userChance()
+        game.user_playing_position = "S"
+        print(game.count_list)
+        
+    else:
+        game.computerChance()
+        game.user_playing_position = "F"
+        print(game.count_list)
