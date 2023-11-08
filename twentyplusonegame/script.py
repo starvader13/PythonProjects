@@ -28,9 +28,9 @@ while game.checkListElement():
     if game.user_playing_position == True:
         game.userChance()
         game.user_playing_position = "S"
-        print(game.count_list)
-        
     else:
         game.computerChance()
         game.user_playing_position = "F"
-        print(game.count_list)
+
+    game.checkLoseGame()
+    print(game.count_list)

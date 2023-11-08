@@ -113,4 +113,9 @@ class TwentyPLusOneGame:
             return False
         else:
             return True
-            
+
+    def checkLoseGame(self):
+        if self.count_list[-1]>=21 and self.user_playing_position==True:
+            print("You won the game.")
+        elif self.count_list[-1]>=21 and self.user_playing_position==False:
+            print("You lost the game.")
