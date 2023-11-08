@@ -84,9 +84,12 @@ class TwentyPLusOneGame:
                 print("The continuity of the list element is not maintained.")
                 exit()
 
+    def printStatementForInput(self):
+        print("> ", end="")
+
     def userChance(self):
         print("\nEnter the count of number you want to enter.")
-        print("> ", end="")
+        self.printStatementForInput()
         self.itr = int(input())
 
         self.checkIteration()
@@ -94,7 +97,7 @@ class TwentyPLusOneGame:
         print("\nEnter the number you want to enter:")
 
         while self.itr:
-            print("> ", end="")
+            self.printStatementForInput()
             self.user_input = int(input())
             self.checkListContinuity()
             self.count_list = self.user_input
@@ -105,6 +108,7 @@ class TwentyPLusOneGame:
         while self.itr:
             self.count_list = len(self.count_list) + 1
             self.itr -= 1
+        print("\nThe entry from the computer side is: ")
 
     def checkListElement(self):
         if len(self.count_list) == 0:
@@ -119,3 +123,4 @@ class TwentyPLusOneGame:
             print("You won the game.")
         elif self.count_list[-1]>=21 and self.user_playing_position==False:
             print("You lost the game.")
+            exit()
