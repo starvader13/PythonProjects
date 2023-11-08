@@ -60,6 +60,7 @@ class TwentyPLusOneGame:
     def user_input(self):
         return self._user_input
 
+    @user_input.setter
     def user_input(self, user_input):
         if not isinstance(user_input, int):
             raise Exception("Enter a valid integer number.")
@@ -73,17 +74,15 @@ class TwentyPLusOneGame:
 
     def checkIteration(self):
         if self.itr >= 4:
-            print("You have been disqualified from the game for entering the count of number greater than pr equal to 4")
+            print("\nYou have been disqualified from the game for entering the count of number greater than pr equal to 4")
             exit()
 
     def checkListContinuity(self):
-        if  (self.count_list)==0:
-            pass
-        elif self.user_input - self.count_list[-1] == 1:
-            pass
-        else:
-            print("The continuity of the list element is not maintained.")
-            exit()
+        if len(self.count_list)!=0:
+            if self.user_input - self.count_list[-1] != 1:
+                print("\nYou have been disqualified from the game.")
+                print("The continuity of the list element is not maintained.")
+                exit()
 
     def userChance(self):
         print("\nEnter the count of number you want to enter.")
@@ -92,16 +91,18 @@ class TwentyPLusOneGame:
 
         self.checkIteration()
 
+        print("\nEnter the number you want to enter:")
+
         while self.itr:
-            print("\nEnter the number you want to enter:")
             print("> ", end="")
             self.user_input = int(input())
             self.checkListContinuity()
-            itr -= 1
+            self.count_list = self.user_input
+            self.itr -= 1
 
     def computerChance(self):
         self.itr = random.randint(1,3)
         while self.itr:
-            self.count_list = len(self.count_list)
+            self.count_list = len(self.count_list) + 1
             self.itr -= 1
     

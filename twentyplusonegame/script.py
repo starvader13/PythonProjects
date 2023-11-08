@@ -7,6 +7,7 @@ def WaitingMessage():
     print("Do you want to start the game?")
     print("> ",end="")
 
+
 game = TwentyPLusOneGame()
 
 WaitingMessage()
