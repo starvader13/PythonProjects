@@ -30,11 +30,7 @@ git clone https://github.com/starvader13/PythonProjects.git
 
 - Navigate to the project directory:
 ```bash
-cd PythonProjects
-```
-
-```bash
-cd twentyplusonegame
+cd PythonProjects/twentyplusonegame
 ```
 
 - Run the game using Python:

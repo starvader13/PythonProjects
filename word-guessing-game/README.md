@@ -28,11 +28,7 @@ git clone https://github.com/starvader13/PythonProjects.git
 
 - Navigate to the project directory:
 ```bash
-cd PythonProjects
-```
-
-```bash
-cd word-guessing-game
+cd PythonProjects/word-guessing-game
 ```
 
 - Run the game using Python:

@@ -19,11 +19,7 @@ git clone https://github.com/starvader13/PythonProjects.git
 
 - Navigate to the project directory:
 ```bash
-cd PythonProjects
-```
-
-```bash
-cd number-guessing-game
+cd PythonProjects/number-guessing-game
 ```
 
 - Run the game using Python:
