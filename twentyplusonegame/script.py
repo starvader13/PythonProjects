@@ -7,20 +7,32 @@ def WaitingMessage():
     print("Do you want to start the game?")
     print("> ",end="")
 
-game = TwentyPLusOneGame()
-
-WaitingMessage()
-
-game.start = str(input())
-game.checkStart()
-
-print("\nIf you want to start first press F otherwise press S: ")
-print("> ",end="")
-game.user_playing_position = str(input())
-
-if game.user_playing_position == True:
+def userGame():
     game.userChance()
-else:
-    game.computerChance()
+    game.user_playing_position = "S"
 
-print(game.count_list)
+def computerGame():
+    game.computerChance()
+    game.user_playing_position = "F"
+
+
+if __name__ == "__main__":
+    game = TwentyPLusOneGame()
+
+    WaitingMessage()
+
+    game.start = str(input())
+    game.checkStart()
+
+    print("\nIf you want to start first press F otherwise press S: ")
+    game.printStatementForInput()
+    game.user_playing_position = str(input())
+
+    while game.checkListElement():
+        if game.user_playing_position == True:
+            userGame()
+        else:
+            computerGame()
+        
+        print(game.count_list)
+        game.checkLoseGame()
