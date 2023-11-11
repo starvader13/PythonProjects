@@ -69,8 +69,19 @@ class Flames:
 
     def calculateFlames(self):
         self.calculateCount()
+        itr = 1
+        temp_count = 1
 
-        while not len(self.flames_list)==1:
-            self.flames_list.pop(int(self.count%len(self.flames_list)))
+        while len(self.flames_list)>1:
+            if temp_count == self.count:
+                self.flames_list.pop(itr-1)
+                itr -= 1
+                temp_count = 0
+
+            if itr >= len(self.flames_list):
+                itr = 0
+
+            itr += 1
+            temp_count += 1
 
         self.mapListElementWithString()
