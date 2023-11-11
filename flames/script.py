@@ -8,11 +8,11 @@ if __name__ == "__main__":
     welcomeMessage()
     game = Flames()
 
-    print("Enter the name of the first user.", end=" ")
+    print("Enter the name of the first user:", end=" ")
     game.first_user = str(input())
 
-    print("Enter the name of the second user.", end=" ")
+    print("Enter the name of the second user:", end=" ")
     game.second_user = str(input())
     
-    print("Output:\nRELATIONSHIP STATUS: ", end="")
+    print("\nOutput:\nRELATIONSHIP STATUS: ", end="")
     game.calculateFlames()    

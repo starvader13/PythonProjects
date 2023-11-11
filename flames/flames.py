@@ -2,7 +2,7 @@ class Flames:
     def __init__(self):
         self._first_user = None
         self._second_user = None
-        self._flames_list = ["F","L","A","M","E"]
+        self._flames_list = ["F","L","A","M","E","S"]
         self._count = 0
 
     @property
@@ -14,7 +14,7 @@ class Flames:
         if not isinstance(first_user, str):
             raise Exception("The entered value should only be a string")
 
-        self._first_user = first_user
+        self._first_user = first_user.lower()
 
     @property
     def second_user(self):
@@ -25,7 +25,7 @@ class Flames:
         if not isinstance(second_user, str):
             raise Exception("The entered value should only be a string")
 
-        self._second_user = second_user
+        self._second_user = second_user.lower()
     
     @property
     def flames_list(self):
@@ -59,3 +59,25 @@ class Flames:
         for val in self.elementWithMinLength():
             if val in self.second_user and val in self.first_user:
                 self.count+=1
+
+    def mapListElementWithString(self):
+        if self.flames_list[0] == "F":
+            print("Friends")
+        if self.flames_list[0] == "L":
+            print("Lovers")
+        if self.flames_list[0] == "A":
+            print("Affectionate")
+        if self.flames_list[0] == "M":
+            print("Marriage")
+        if self.flames_list[0] == "E":
+            print("Enemies")
+        if self.flames_list[0] == "S":
+            print("Siblings")
+
+    def calculateFlames(self):
+        self.calculateCount()
+
+        while not len(self.flames_list)==1:
+            self.flames_list.pop(int(self.count%len(self.flames_list)))
+
+        self.mapListElementWithString()
