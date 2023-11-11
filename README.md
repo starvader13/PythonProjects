@@ -36,6 +36,11 @@ cd PythonProjects
         <a href="./twentyplusonegame/">Number Guessing Game</a><br>
         Created By: <a href="https://github.com/starvader13">Starvader</a>
     </li>
+    <br>
+    <li>
+        <a href="./flames/">FLAMES Game</a><br>
+        Created By: <a href="https://github.com/starvader13">Starvader</a>
+    </li>
 </ul>
 
 ## Prerequisites
