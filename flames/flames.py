@@ -45,20 +45,13 @@ class Flames:
     def count(self, count):
         self._count = count
 
-    def elementWithMaxLength(self):
-        return (self.first_user if len(self.first_user) > len(self.second_user) else self.second_user)
-
-    def elementWithMinLength(self):
-        return (self.first_user if len(self.first_user) < len(self.second_user) else self.second_user)
-
     def calculateCount(self):
-        for val in self.elementWithMaxLength():
-            if val in self.second_user and val in self.first_user:
-                self.count+=1
-
-        for val in self.elementWithMinLength():
-            if val in self.second_user and val in self.first_user:
-                self.count+=1
+        second_user_list = list(self.second_user)
+        for element in self.first_user:
+            if element in second_user_list:
+                self.count += 2
+                second_user_list.pop(second_user_list.index(element))
+        self.count = len(self.first_user) + len(self.second_user) - self.count
 
     def mapListElementWithString(self):
         if self.flames_list[0] == "F":
