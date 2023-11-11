@@ -3,6 +3,7 @@ class Flames:
         self._first_user = None
         self._second_user = None
         self._flames_list = ["F","L","A","M","E"]
+        self._count = 0
 
     @property
     def first_user(self):
@@ -35,3 +36,26 @@ class Flames:
         if not isinstance(flames_list, list):
             return Exception("The assgining variable is not a list.")
         self._flames_list = flames_list    
+
+    @property
+    def count(self):
+        return self._count
+
+    @count.setter
+    def count(self, count):
+        self._count = count
+
+    def elementWithMaxLength(self):
+        return (self.first_user if len(self.first_user) > len(self.second_user) else self.second_user)
+
+    def elementWithMinLength(self):
+        return (self.first_user if len(self.first_user) < len(self.second_user) else self.second_user)
+
+    def calculateCount(self):
+        for val in self.elementWithMaxLength():
+            if val in self.second_user and val in self.first_user:
+                self.count+=1
+
+        for val in self.elementWithMinLength():
+            if val in self.second_user and val in self.first_user:
+                self.count+=1

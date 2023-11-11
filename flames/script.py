@@ -9,9 +9,10 @@ if __name__ == "__main__":
     game = Flames()
 
     print("Enter the name of the first user.", end=" ")
-    games.first_user = str(input())
+    game.first_user = str(input())
 
-    print("Enter the name of the first user.", end=" ")
-    games.second_user = str(input())
+    print("Enter the name of the second user.", end=" ")
+    game.second_user = str(input())
     
-        
+    print("Output:\nRELATIONSHIP STATUS: ", end="")
+    game.calculateFlames()    
