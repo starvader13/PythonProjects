@@ -12,9 +12,15 @@ if __name__ == "__main__":
     game = PokemonTrainingGame()
 
     while True:
-        # print("Please enter your choice [C/E]")
-        # game.user_choice = str(input())
+        print("Please enter your choice [C/E]")
+        print("> ", end="")
+        game.user_choice = str(input())
 
-        game.powers = int(input())
-        game.calculateMinimumMaximumPower()
-        print(game.min_power, game.max_power)
+        if game.user_choice == True:
+            print("Enter the power of the pokemon you caught: ", end="")
+            game.powers = int(input())
+            game.calculateMinimumMaximumPower()
+            print(f"Mimumu Power: {game.min_power}, Maximum Power: {game.max_power}")
+        else:
+            print("Exiting the game ...")
+            exit()
