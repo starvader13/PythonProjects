@@ -23,22 +23,22 @@ cd PythonProjects
 ## Table of Contents
 <ul>
     <li>
-        <a href="https://github.com/starvader13/PythonProjects/tree/335aea3316848ea9d1b72eb9fee3156765beb415/word-guessing-game">Word Guessing Game</a><br>
+        <a href="https://github.com/starvader13/PythonProjects/blob/main/word-guessing-game/README.md">Word Guessing Game</a><br>
         Created By: <a href="https://github.com/starvader13">Starvader</a>
     </li>
     <br>
     <li>
-        <a href="./number-guessing-game/">Number Guessing Game</a><br>
+        <a href="https://github.com/starvader13/PythonProjects/blob/main/number-guessing-game/README.md">Number Guessing Game</a><br>
         Created By: <a href="https://github.com/starvader13">Starvader</a>
     </li>
     <br>
     <li>
-        <a href="./twentyplusonegame/">Number Guessing Game</a><br>
+        <a href="https://github.com/starvader13/PythonProjects/blob/main/twentyplusonegame/README.md">Twenty Plus One Game</a><br>
         Created By: <a href="https://github.com/starvader13">Starvader</a>
     </li>
     <br>
     <li>
-        <a href="./flames/">FLAMES Game</a><br>
+        <a href="https://github.com/starvader13/PythonProjects/blob/main/flames/README.md">FLAMES Game</a><br>
         Created By: <a href="https://github.com/starvader13">Starvader</a>
     </li>
 </ul>
