@@ -9,6 +9,14 @@ def rulesOfGame():
     print("Rock vs Scissor -> Rock Wins")
     print("Scissor vs Paper -> Scissor Wins.", end="\n\n")
 
+def gameOption():
+    print("\nUser's Turn ... ", end="\n\n")
+    print("Choose From the option:")
+    print("1. Rock")
+    print("2. Paper")
+    print("3. Scissor")
+    print("> ", end="")
+
 if __name__ == "__main__":
     welcomeMessage()
     rulesOfGame()
@@ -19,20 +27,14 @@ if __name__ == "__main__":
     game.username = str(input())
 
     while game.next_turn:
-        print("\nChoose From the option:")
-        print("1. Rock")
-        print("2. Paper")
-        print("3. Scissor")
-        print("> ", end="")
+        gameOption()
 
-        game.user_input = int(input())
-        print(f"\nUser Choice is: {game.user_input}")
+        game.userTurn()
 
-        print("\n Computer's Turn ... ", end="\n\n")
-        game.computer_input = game.intializeComputerInput()
-        print(f"\nComputer Choice is: {game.computer_input}", end = "\n\n")
+        game.computerTurn()
 
-        print(f"Game: {game.user_input} vs {game.computer_input}", end = "\n\n")
+        game.gameDetails()
+
         game.chooseWinner()
 
         game.setValueForNextTurn()

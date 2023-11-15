@@ -93,3 +93,15 @@ class RockPaperScissorGame:
     def setValueForNextTurn(self):
         print("Do you wanna play one more chance? Yes/No[Y/N]: ",end="")
         self.next_turn = str(input())
+
+    def computerTurn(self):
+        print("\nComputer's Turn ... ")
+        self.computer_input = self.intializeComputerInput()
+        print(f"Computer Choice is: {self.computer_input}", end = "\n\n")
+
+    def userTurn(self):
+        self.user_input = int(input())
+        print(f"User Choice is: {self.user_input}")
+
+    def gameDetails(self):
+        print(f"Game: {self.user_input} vs {self.computer_input}", end = "\n\n")
