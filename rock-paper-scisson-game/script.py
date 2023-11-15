@@ -15,15 +15,24 @@ if __name__ == "__main__":
 
     game = RockPaperScissorGame()
 
-    print("Choose From the option:")
-    print("1. Rock")
-    print("2. Paper")
-    print("3. Scissor")
-    print("> ", end="")
+    print("To start the game, Please Enter Your First Name: ", end="")
+    game.username = str(input())
 
-    game.user_input = int(input())
-    game.computer_input = game.intializeComputerInput()
+    while game.next_turn:
+        print("\nChoose From the option:")
+        print("1. Rock")
+        print("2. Paper")
+        print("3. Scissor")
+        print("> ", end="")
 
-    print(game.user_input)
-    print(game.computer_input)
+        game.user_input = int(input())
+        print(f"\nUser Choice is: {game.user_input}")
 
+        print("\n Computer's Turn ... ", end="\n\n")
+        game.computer_input = game.intializeComputerInput()
+        print(f"\nComputer Choice is: {game.computer_input}", end = "\n\n")
+
+        print(f"Game: {game.user_input} vs {game.computer_input}", end = "\n\n")
+        game.chooseWinner()
+
+        game.setValueForNextTurn()

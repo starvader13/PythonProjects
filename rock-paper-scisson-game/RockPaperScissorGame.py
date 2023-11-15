@@ -7,6 +7,7 @@ class RockPaperScissorGame:
         self._user_input = None
         self._computer_input = None
         self._winner_output = None
+        self._next_turn = True
 
     @property
     def username(self):
@@ -52,6 +53,18 @@ class RockPaperScissorGame:
             raise Exception("The assigned value to the winner output should only be a boolean value")
         self._winner_output = winner_output
     
+    @property
+    def next_turn(self):
+        return self._next_turn
+
+    @next_turn.setter
+    def next_turn(self, next_turn):
+        next_turn = next_turn.lower()
+        if next_turn != "y" and next_turn != "n" and next_turn != "yes" and next_turn != "no":
+            raise Exception("The entered valued can either be Yes OR Y / NO or N")
+
+        self._next_turn = True if (next_turn == "yes" or next_turn == "y") else False
+
     def popElementFromList(self, index = None):
         if self.game_element:
             if index is None:
@@ -73,6 +86,10 @@ class RockPaperScissorGame:
 
     def chooseWinner(self):
         if (self.user_input=="Rock" and self.computer_input=="scissor") or (self.user_input=="Scissor" and self.computer_input=="Paper") or (self.user_input=="Paper" and self.computer_input=="Rock"):
-            print(f"{self.username} wins the game:")
+            print(f"{self.username} wins the game:", end = "\n\n")
         else:
-            print("Computer wins the game.")
+            print("Computer wins the game.", end = "\n\n")
+
+    def setValueForNextTurn(self):
+        print("Do you wanna play one more chance? Yes/No[Y/N]: ",end="")
+        self.next_turn = str(input())
