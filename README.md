@@ -41,6 +41,16 @@ cd PythonProjects
         <a href="https://github.com/starvader13/PythonProjects/blob/main/flames/README.md">FLAMES Game</a><br>
         Created By: <a href="https://github.com/starvader13">Starvader</a>
     </li>
+    <br>
+    <li>
+        <a href="https://github.com/starvader13/PythonProjects/blob/main/pokemon-training-game/README.md">Pokemon Training Game</a><br>
+        Created By: <a href="https://github.com/starvader13">Starvader</a>
+    </li>
+    <br>
+    <li>
+        <a href="https://github.com/starvader13/PythonProjects/blob/main/rock-paper-scissor-game/README.md">Rock Paper Scissor Game</a><br>
+        Created By: <a href="https://github.com/starvader13">Starvader</a>
+    </li>
 </ul>
 
 ## Prerequisites
