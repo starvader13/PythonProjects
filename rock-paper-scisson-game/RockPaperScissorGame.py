@@ -3,9 +3,20 @@ import random
 class RockPaperScissorGame:
     def __init__(self):
         self._game_element = ["Rock", "Paper", "Scissor"]
+        self._username = None
         self._user_input = None
         self._computer_input = None
         self._winner_output = None
+
+    @property
+    def username(self):
+        return self._username
+
+    @username.setter
+    def username(self, username):
+        if not isinstance(username, str) or len(username)<=1:
+            raise Exception("The Name of the user should be a valid string")
+        self._username = username
 
     @property
     def game_element(self):
@@ -59,3 +70,9 @@ class RockPaperScissorGame:
         game_element_temp = self.game_element
         self.popElementFromList(self.game_element.index(self.user_input))
         return game_element_temp[self.randomIndex()]
+
+    def chooseWinner(self):
+        if (self.user_input=="Rock" and self.computer_input=="scissor") or (self.user_input=="Scissor" and self.computer_input=="Paper") or (self.user_input=="Paper" and self.computer_input=="Rock"):
+            print(f"{self.username} wins the game:")
+        else:
+            print("Computer wins the game.")
