@@ -60,4 +60,10 @@ class CowsAndBullsGame:
             raise Exception("The cows assigned value has crossed the max length of the secret code")
         self._num_cows = num_cows
 
+    def getUsername(self):
+        return str(input()).capitalize()
+
+    def setUsername(self):
+        print("Please enter the name of the user: ",end="")
+        self.user_name = self.getUsername()
     
