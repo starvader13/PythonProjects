@@ -2,7 +2,6 @@ import random
 
 class CowsAndBullsGame:
     def __init__(self):
-        self._user_name = None
         self._secret_code = None
         self._user_code = None
         self._num_bulls = None
@@ -59,11 +58,3 @@ class CowsAndBullsGame:
         if num_bulls>len(self.secret_code):
             raise Exception("The cows assigned value has crossed the max length of the secret code")
         self._num_cows = num_cows
-
-    def getUsername(self):
-        return str(input()).capitalize()
-
-    def setUsername(self):
-        print("Please enter the name of the user: ",end="")
-        self.user_name = self.getUsername()
-    
